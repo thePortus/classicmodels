@@ -4,7 +4,7 @@
 
 // Enter server and user authentication information
 $servername = "localhost";
-$username = "ClassicModelsApp";
+$username = "classicmodels_app";
 $password = "usfdh_student";
 $dbname = "classicmodels";
 
