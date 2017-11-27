@@ -16,8 +16,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Automatically covert query string variables into PHP variables (expect customer_id)
+parse_str($_SERVER['QUERY_STRING']);
+
 // Form the query
-$sql = "SELECT * FROM customers ORDER BY customers.customerNumber;";
+$sql = "SELECT * FROM customers WHERE customers.customerID = " . $customer_id . ";";
 
 // Send query to server and store returned data in $result
 $result = $conn->query($sql);
