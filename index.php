@@ -15,12 +15,12 @@
         generate html. The snipped below just prints the headline with 'echo'-->
         <?php
             # echo is even more powerful when used with variables and loops
-            echo "<div class=\"jumbotron\"><a href=\"index.php\">Classic Models Database - PHP Example Pages</a></div>"
+            echo "<div class=\"jumbotron\"><a href=\"index.php\">Classic Models Database</a> - PHP Example Pages</div>"
         ?>
         <div class="container">
             <ul>
-                <li><a href="customers.php">customers.php - Lists all customers</a></li>
-                <li><a href="customers.php">customer.php - Looks up a single customer</a></li>
+                <li><a href="customers.php">customers.php</a> - Lists all customers</li>
+                <li><a href="customers.php">customer.php</a> - Looks up a single customer</li>
             </ul>
         </div>
         <!-- include bootstrap javascript -->
