@@ -36,7 +36,7 @@ $result = $conn->query($sql);
     <body>
         <div class="jumbotron">Classic Models Customers</div>
         <div class="container">
-            <table>
+            <table class="table table-striped table-hover table-condensed">
                 <thead>
                     <tr>
                         <th>#</th><th>Name</th><th>Contact</th><th>Phone</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Country</th><th>Credit Limit</th>
