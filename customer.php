@@ -39,7 +39,7 @@ $result = $conn->query($sql);
     <body>
         <div class="jumbotron">Classic Models dB: Customer Lookup</div>
         <?php
-            echo "$customer_id";
+            echo "$sql";
         ?>
         <div class="container">
             <table class="table table-striped table-hover table-condensed">
