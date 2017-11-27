@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 parse_str($_SERVER['QUERY_STRING']);
 
 // Form the query
-$sql = "SELECT * FROM customers WHERE customers.customerID = " . $customer_id . ";";
+$sql = "SELECT * FROM customers WHERE customers.customerNumber = " . $customer_id . ";";
 
 // Send query to server and store returned data in $result
 $result = $conn->query($sql);
@@ -38,9 +38,6 @@ $result = $conn->query($sql);
 
     <body>
         <div class="jumbotron">Classic Models dB: Customer Lookup</div>
-        <?php
-            echo "$sql";
-        ?>
         <div class="container">
             <table class="table table-striped table-hover table-condensed">
                 <thead>
