@@ -37,7 +37,7 @@ $result = $conn->query($sql);
     </head>
 
     <body>
-        <div class="jumbotron">Classic Models dB: Customer Lookup</div>
+        <div class="jumbotron"><a href="index.php">Classic Models dB: Customer Lookup</a></div>
         <div class="container">
             <table class="table table-striped table-hover table-condensed">
                 <thead>

@@ -15,7 +15,7 @@
         generate html. The snipped below just prints the headline with 'echo'-->
         <?php
             # echo is even more powerful when used with variables and loops
-            echo "<div class=\"jumbotron\">Classic Models Database - PHP Example Pages</div>"
+            echo "<div class=\"jumbotron\"><a href=\"index.php\">Classic Models Database - PHP Example Pages</a></div>"
         ?>
         <div class="container">
             <ul>
