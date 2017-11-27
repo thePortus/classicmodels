@@ -21,8 +21,6 @@ $sql = "SELECT * FROM customers";
 
 // Send query to server and store returned data in $result
 $result = $conn->query($sql);
-
-echo $result;
 ?>
 
 <html lang="en">
