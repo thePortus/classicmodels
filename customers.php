@@ -58,7 +58,7 @@ $result = $conn->query($sql);
                             echo "<td>" . $row["state"] . "</td>";
                             echo "<td>" . $row["postalCode"] . "</td>";
                             echo "<td>" . $row["country"] . "</td>";
-                            echo "<td>" . $row["creditLimie"] . "</td>";
+                            echo "<td>" . $row["creditLimit"] . "</td>";
                             echo "</tr>";
                         }
                         ?>

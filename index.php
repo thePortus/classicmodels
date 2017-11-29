@@ -20,7 +20,7 @@
         <div class="container">
             <ul>
                 <li><a href="customers.php">customers.php</a> - Lists all customers</li>
-                <li><a href="customers.php">customer.php</a> - Looks up a single customer</li>
+                <li><a href="customer.php">customer.php</a> - Looks all employees with related info</li>
             </ul>
         </div>
         <!-- include bootstrap javascript -->
