@@ -36,10 +36,19 @@ $result = $conn->query($sql);
     <body>
         <div class="jumbotron"><a href="index.php">Classic Models dB:</a> Customers</div>
         <div class="container">
-            <table class="table table-striped table-hover table-condensed">
+            <table class="table table-striped table-hover table-condensed table-bordered">
                 <thead>
                     <tr>
-                        <th>#</th><th>Name</th><th>Contact</th><th>Phone</th><th>Address</th><th>City</th><th>State</th><th>Zip</th><th>Country</th><th>Credit Limit</th>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zip</th>
+                        <th>Country</th>
+                        <th>Credit Limit</th>
                     </tr>
                 </thead>
                 <tbody>

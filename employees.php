@@ -40,7 +40,7 @@ $result = $conn->query($sql);
     <body>
         <div class="jumbotron"><a href="index.php">Classic Models dB:</a> Employees</div>
         <div class="container">
-            <table class="table table-striped table-hover table-condensed">
+            <table class="table table-striped table-hover table-condensed table-bordered">
                 <thead>
                     <tr>
                         <th>#</th>
