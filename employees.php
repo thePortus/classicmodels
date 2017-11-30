@@ -7,12 +7,12 @@
     include('header.php');
     // snippet builds query, executes it, and stores in $result
     // check $_GET to see if id (#) was passed to query string
-    if (isset($_GET['#'])) {
-        $sql = "SELECT * FROM Employees WHERE Employees.`#` == " . $_GET['#'] . ";";
+    if (isset($_GET['ID'])) {
+        $sql = "SELECT * FROM Employees WHERE Employees.`ID` == " . $_GET['ID'] . ";";
     }
     // if no id was passed in $query string, list all
     else{
-        $sql = "SELECT * FROM Employees ORDER BY '#';";
+        $sql = "SELECT * FROM Employees ORDER BY 'ID';";
     }
     // call script to perform query and store in $result
     include('query_server.php');
@@ -24,7 +24,7 @@
             <table class="table table-striped table-hover table-condensed table-bordered">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Title</th>
                         <th>Supervisor</th>
@@ -44,7 +44,7 @@
                             // start a new table row for each record
                             echo "<tr>";
                             // write out each field as a cell
-                            echo "<td>" . $row["#"] . "</td>";
+                            echo "<td>" . $row["ID"] . "</td>";
                             echo "<td>" . $row["First"] . " " . $row["Last"] . "</td>";
                             echo "<td>" . $row["Title"] . "</td>";
                             echo "<td>" . $row["Supervisor"] . "</td>";
