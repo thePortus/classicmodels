@@ -20,8 +20,9 @@
 
         <div class="container">
             <ul>
-                <li><a href="customers.php">customers.php</a> - Lists all customers</li>
-                <li><a href="employees.php">employees.php</a> - Looks all employees with related info</li>
+                <li><a href="employees.php">employees.php</a></li>
+                <li><a href="products.php">products.php</a></li>
+                <li><a href="customers.php">customers.php</a></li>
             </ul>
         </div>
 
