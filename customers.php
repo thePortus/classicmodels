@@ -8,7 +8,7 @@
     // snippet builds query, executes it, and stores in $result
     // check $_GET to see if id (#) was passed to query string
     if (isset($_GET['ID'])) {
-        $sql = "SELECT * FROM Customers WHERE Customers.`ID` == " . $_GET['ID'] . ";";
+        $sql = "SELECT * FROM Customers WHERE Customers.`ID` = " . $_GET['ID'] . ";";
     }
     // if no id was passed in $query string, list all
     else{
