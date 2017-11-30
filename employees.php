@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 }
 
 // Form the query
-$sql = "SELECT * FROM employees ORDER BY customers.`#`;";
+$sql = "SELECT * FROM Employees ORDER BY '#';";
 
 // Send query to server and store returned data in $result
 $result = $conn->query($sql);
