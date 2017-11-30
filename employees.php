@@ -24,7 +24,15 @@ include('query_server.php');
     <?php include('header.php'); ?>
 
     <body>
-        <div class="jumbotron"><a href="index.php">Classic Models dB:</a> Employees Aray Key Exists: <?php echo array_key_exists('#', $query); ?></div>
+        <div class="jumbotron"><a href="index.php">Classic Models dB:</a></div>
+        <?php
+            if(array_key_exists("#", $query)) {
+                echo "QUERY STRING EXISTS";
+            }
+            else {
+                echo "NO QUERY STRING";
+            }
+        ?>
         <div class="container">
             <table class="table table-striped table-hover table-condensed table-bordered">
                 <thead>
