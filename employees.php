@@ -1,38 +1,25 @@
 <!DOCTYPE html>
 
-<?php
-// ensure that all output is utf-8 unicode character set
-header('Content-Type: text/html; charset=utf-8');
-
-// call script to check the query string and story results in $query
-include('query_string.php');
-
-// if no id was passed in $query string, list all
-//if(!array_key_exists('#', $query)) {
-    $sql = "SELECT * FROM Employees ORDER BY '#';";
-//}
-// if id was passed in $query string, filter to that item
-//elseif {
-//    $sql = "SELECT * FROM Employees WHERE Employees.`#` == " . $query['#'] . ";";
-//}
-// call script to perform query and store in $result
-include('query_server.php');
-?>
-
 <html lang="en">
 
-    <?php include('header.php'); ?>
+    <?php
+    // include page header template
+    include('header.php');
+    // snippet builds query, executes it, and stores in $result
+    // check $_GET to see if id (#) was passed to query string
+    if (isset($_GET['#'])) {
+        $sql = "SELECT * FROM Employees WHERE Employees.`#` == " . $_GET['#'] . ";";
+    }
+    // if no id was passed in $query string, list all
+    else{
+        $sql = "SELECT * FROM Employees ORDER BY '#';";
+    }
+    // call script to perform query and store in $result
+    include('query_server.php');
+    ?>
 
     <body>
         <div class="jumbotron"><a href="index.php">Classic Models dB:</a></div>
-        <?php
-            if(array_key_exists("#", $query)) {
-                echo "QUERY STRING EXISTS";
-            }
-            else {
-                echo "NO QUERY STRING";
-            }
-        ?>
         <div class="container">
             <table class="table table-striped table-hover table-condensed table-bordered">
                 <thead>

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<!-- Header template other pages -->
+<?php
+    // ensure that all output is utf-8 unicode character set
+    header('Content-Type: text/html; charset=utf-8');
+?>
 <head>
     <title>Classic Models MySQL-PHP</title>
     <meta charset="utf-8">
