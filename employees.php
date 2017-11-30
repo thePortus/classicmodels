@@ -7,14 +7,16 @@ header('Content-Type: text/html; charset=utf-8');
 // call script to check the query string and story results in $query
 include('query_string.php');
 
+echo array_key_exists('#', $query);
+
 // if no id was passed in $query string, list all
-if(!array_key_exists('#', $query)) {
+//if(!array_key_exists('#', $query)) {
     $sql = "SELECT * FROM Employees ORDER BY '#';";
-}
+//}
 // if id was passed in $query string, filter to that item
-elseif {
-    $sql = "SELECT * FROM Employees WHERE Employees.`#` == " . $query['#'] . ";";
-}
+//elseif {
+//    $sql = "SELECT * FROM Employees WHERE Employees.`#` == " . $query['#'] . ";";
+//}
 // call script to perform query and store in $result
 include('query_server.php');
 ?>
