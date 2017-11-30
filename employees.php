@@ -4,11 +4,19 @@
 // ensure that all output is utf-8 unicode character set
 header('Content-Type: text/html; charset=utf-8');
 
-// form the query
-$sql = "SELECT * FROM Employees ORDER BY '#';";
+// call script to check the query string and story results in $query
+include('query_string.php');
 
+// if no id was passed in $query string, list all
+if(!array_key_exists('#', $query)) {
+    $sql = "SELECT * FROM Employees ORDER BY '#';";
+}
+// if id was passed in $query string, filter to that item
+elseif {
+    $sql = "SELECT * FROM Employees WHERE Employees.`#` == " . $query['#'] . ";";
+}
 // call script to perform query and store in $result
-include('query.php');
+include('query_server.php');
 ?>
 
 <html lang="en">

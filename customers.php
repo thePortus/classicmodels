@@ -4,11 +4,19 @@
 // ensure that all output is utf-8 unicode character set
 header('Content-Type: text/html; charset=utf-8');
 
-// form the query
-$sql = "SELECT * FROM Employees ORDER BY '#';";
+// call script to check the query string and story results in $query
+include('query_string.php');
 
+// if no id was passed in $query string, list all
+if(!array_key_exists('#', $query)) {
+    $sql = "SELECT * FROM Customers ORDER BY '#';";
+}
+// if id was passed in $query string, filter to that item
+elseif {
+    $sql = "SELECT * FROM Customers WHERE Customers.`#` == " . $query['#'] . ";";
+}
 // call script to perform query and store in $result
-include('query.php');
+include('query_server.php');
 ?>
 
 <html lang="en">
@@ -23,6 +31,7 @@ include('query.php');
                     <tr>
                         <th>#</th>
                         <th>Name</th>
+                        <th>Credit Limit</th>
                         <th>Contact</th>
                         <th>Phone</th>
                         <th>Address</th>
@@ -30,7 +39,8 @@ include('query.php');
                         <th>State</th>
                         <th>Zip</th>
                         <th>Country</th>
-                        <th>Credit Limit</th>
+                        <th>Sales Rep.</th>
+                        <th>Sales Rep. Phone</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,16 +50,18 @@ include('query.php');
                             // start a new table row for each record
                             echo "<tr>";
                             // write out each field as a cell
-                            echo "<td>" . $row["customerNumber"] . "</td>";
-                            echo "<td>" . $row["customerName"] . "</td>";
-                            echo "<td>" . $row["contactFirstName"] . " " . $row["contactLastName"] . "</td>";
-                            echo "<td>" . $row["phone"] . "</td>";
-                            echo "<td>" . $row["addressLine1"] . " " . $row["addressLine2"] . "</td>";
-                            echo "<td>" . $row["city"] . "</td>";
-                            echo "<td>" . $row["state"] . "</td>";
-                            echo "<td>" . $row["postalCode"] . "</td>";
-                            echo "<td>" . $row["country"] . "</td>";
-                            echo "<td>" . $row["creditLimit"] . "</td>";
+                            echo "<td>" . $row["#"] . "</td>";
+                            echo "<td>" . $row["Name"] . "</td>";
+                            echo "<td>" . $row["Credit Limit"] . "</td>";
+                            echo "<td>" . $row["Contact First"] . " " . $row["Contact Last"] . "</td>";
+                            echo "<td>" . $row["Phone"] . "</td>";
+                            echo "<td>" . $row["Address"] . " " . $row["Address 2"] . "</td>";
+                            echo "<td>" . $row["City"] . "</td>";
+                            echo "<td>" . $row["State"] . "</td>";
+                            echo "<td>" . $row["Zip"] . "</td>";
+                            echo "<td>" . $row["Country"] . "</td>";
+                            echo "<td>" . $row["Sales Rep."] . "</td>";
+                            echo "<td>" . $row["Sales Rep. Phone"] . "</td>";
                             echo "</tr>";
                         }
                         ?>
