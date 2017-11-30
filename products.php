@@ -4,7 +4,7 @@
 
     <?php
     // include page header template
-    include('header.php');
+    include('templates/header.php');
     // snippet builds query, executes it, and stores in $result
     // check $_GET to see if id (#) was passed to query string
     if (isset($_GET['ID'])) {
@@ -12,10 +12,10 @@
     }
     // if no id was passed in $query string, list all
     else{
-        $sql = "SELECT * FROM Products ORDER BY 'ID';";
+        $sql = "SELECT * FROM Products ORDER BY 'ID' ASC;";
     }
     // call script to perform query and store in $result
-    include('query_server.php');
+    include('templates/query_server.php');
     ?>
 
     <body>
@@ -60,7 +60,7 @@
             </table>
         </div>
 
-        <?php include('footer.php'); ?>
+        <?php include('templates/footer.php'); ?>
 
     </body>
 </html>
