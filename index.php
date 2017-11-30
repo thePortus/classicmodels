@@ -7,7 +7,7 @@
     templates so you don't have to repeat yourself over multiple documents.
 
     This includes the header, including title and CSS dependencies-->
-    <?php include('header.php'); ?>
+    <?php include('templates/header.php'); ?>
 
     <body>
 
@@ -27,6 +27,6 @@
         </div>
 
         <!-- Includes Bootstrap JavaScript dependencies -->
-        <?php include('footer.php'); ?>
+        <?php include('templates/footer.php'); ?>
     </body>
 </html>
